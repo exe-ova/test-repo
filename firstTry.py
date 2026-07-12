@@ -3,7 +3,7 @@ import requests
 def get_currencies():
     base_url = 'https://api.nbrb.by/exrates/currencies'
     try:
-        response = requests.get(base_url, timeout=2)
+        response = requests.get(base_url, timeout=3)
         response.raise_for_status()
         return response.json()
     except requests.exceptions.ConnectTimeout as e:
