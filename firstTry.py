@@ -1,6 +1,6 @@
 import requests
 
-def get_currencies() -> list:
+def get_currencies():
     base_url = 'https://api.nbrb.by/exrates/currencies'
     try:
         response = requests.get(base_url, timeout=5)
